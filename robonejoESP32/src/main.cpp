@@ -76,7 +76,7 @@ void loop() {
 
     // Controle motor direito
     if (abs(velocidadeDir) > 10) {
-        motor(PUL_DIR, DIR_DIR, (velocidadeDir > 0) ? LOW : HIGH, abs(velocidadeDir));
+        motor(PUL_DIR, !DIR_DIR, (velocidadeDir > 0) ? LOW : HIGH, abs(velocidadeDir));
     }
 
     delay(1);  // Pequeno delay para não sobrecarregar o loop
